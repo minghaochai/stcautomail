@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/23e0c297-fa30-436b-9fab-ee8467532018/resourceGroups/stcauto/providers/Microsoft.Web/sites/stcautomailservice",
+    "appService.deploySubpath": "."
+}
