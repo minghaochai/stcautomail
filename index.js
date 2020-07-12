@@ -88,14 +88,18 @@ async function sendMail(user, callback) {
         from: '"Haomc" <haomcapptest@gmail.com',
         //from: user.requestorMail,
         to: 'haomcapptest@gmail.com',
-        subject:  mailSubject.concat('Enquiry from ', user.requestorMail, ' on ', currentDate),
-        text: 'Name: ' + user.requestorName + '\n' +
+        subject:  mailSubject.concat('Enquiry from ', user.requestorName, ' on ', currentDate),
+        text:   'You have received an Enquiry from ' + user.requestorName + ', please refer to the details below' + '\n' + '\n' +
+                'Name: ' + user.requestorName + '\n' +
+                'Email: ' + user.requestorMail + '\n' +
                 'Contact number: ' + user.requestorContact + '\n' +
                 'Address: ' + user.requestorAddress + '\n' +
                 'Country: ' + user.requestorCountry + '\n' +
                 'Car Model: ' + user.requestorCarModel + '\n' +
                 'Frame: ' + user.requestorFrame + '\n' +
-                'Remarks: ' + user.requestorRemarks + '\n'
+                'Remarks: ' + user.requestorRemarks + '\n' + '\n' +
+
+                'This email is sent via contact form on STC Auto Parts https://stcauto.azurewebsites.net'
     };
   
     // send mail with defined transport object
